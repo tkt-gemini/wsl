@@ -43,6 +43,16 @@ sudo apt install -y build-essential cmake pkg-config ninja-build libssl-dev libf
 chsh -s $(which zsh)
 ```
 
+### Git Configuration
+
+```bash
+git config --global user.name "<name>"
+git config --global user.email "<email>"
+git config --global core.editor "nvim"
+ssh-keygen -t ed25519 -C "<email>"
+cat ~/.ssh/id_ed25519.pub
+```
+
 ---
 
 ## Zinit
@@ -174,7 +184,7 @@ zinit wait lucid light-mode for \
 
 ### End of Zinit's installer chunk
 
-export PATH="/home/tkt31/.pixi/bin:$PATH"
+export PATH="$HOME/.pixi/bin:$PATH"
 ```
 
 ---
