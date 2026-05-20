@@ -194,6 +194,13 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+# Zinit Annexes
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
 # Plugins — turbo mode (zi"!" = load now, zi = lazy)
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
@@ -201,10 +208,11 @@ zinit wait lucid light-mode for \
   atload"_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions \
   blockf atpull"zinit creinstall -q ." \
-    zsh-users/zsh-completions
+    zsh-users/zsh-completions \
+    jeffreytse/zsh-vi-mode
 
 zinit wait lucid light-mode for \
-  Aloxaf/fzf-tab   # tab completion with fzf UI
+  Aloxaf/fzf-tab
 
 # --- Options ---
 setopt AUTO_CD
@@ -215,8 +223,12 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# --- mise ---
+# --- Environment Managers ---
+# mise
 eval "$(~/.local/bin/mise activate zsh)"
+
+# fnm
+eval "$(fnm env --use-on-cd)"
 
 # --- zoxide (z command) ---
 eval "$(zoxide init zsh)"
