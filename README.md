@@ -1,6 +1,6 @@
 # WSL Ubuntu 26.04 — Setup environment for dev
 
-> Stack: Zsh + Zinit + Starship + Zellij + Neovim + mise + pixi
+> Workflow: Shell(zsh; zinit; starship) + Pgks Manager (apt; mise; pixi) + Multiplexer(zellij) + Editor(neovim)
 
 ---
 
@@ -8,21 +8,23 @@
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  Windows: NVIDIA Driver (cho CUDA passthrough)      │
+│  Windows:                                           │
+│  NVIDIA Driver (for CUDA passthrough)               │
+│  Docker desktop (WSL intergration)                  │
 └──────────────────────────┬──────────────────────────┘
                            │ WSL2
 ┌──────────────────────────▼──────────────────────────┐
 │  APT — system layer                                 │
-│  build tools, system libs, git, curl                │
+│  Build tools, system libs, git, curl                │
 ├─────────────────────────────────────────────────────┤
 │  mise — tooling layer                               │
-│  Node, Python, CLI tools (ripgrep, bat, fzf...)     │
+│  Dev runtimes, CLI tools (ripgrep, bat, fzf...)     │
 ├─────────────────────────────────────────────────────┤
 │  pixi — AI/ML layer (per-project)                   │
 │  PyTorch, transformers, CUDA runtime...             │
 ├─────────────────────────────────────────────────────┤
-│  Shell: Zsh + Zinit + Starship                      │
-│  Terminal mux: Zellij                               │
+│  Shell: Zsh; Zinit; Starship                        │
+│  Multiplexer: Zellij                                │
 │  Editor: Neovim                                     │
 └─────────────────────────────────────────────────────┘
 ```
@@ -126,6 +128,9 @@ mouse_mode false
 ```bash
 mise use -g github:neovim/neovim
 ```
+
+Details configuration (here)[https://github.com/tkt-gemini/neovim]
+
 ---
 
 ## Pixi
