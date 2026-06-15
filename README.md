@@ -1,4 +1,10 @@
-# WSL Ubuntu 26.04 — Setup environment for dev
+<div align="center">
+
+# WSL Ubuntu 26.04
+
+**Workflow for Embodied AI**
+
+</div>
 
 <details>
 <summary>Workflow</summary>
@@ -44,7 +50,7 @@
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-
+# install all necessary packages for apt
 sudo apt install -y $(cat apt-pkgs.txt | grep -v '^#' | tr '\n' ' ')
 ```
 
@@ -53,6 +59,8 @@ sudo apt install -y $(cat apt-pkgs.txt | grep -v '^#' | tr '\n' ' ')
 ```bash
 chsh -s $(which zsh)
 ```
+
+Details configuration [here](.zshrc)
 
 ### Git Configuration
 
