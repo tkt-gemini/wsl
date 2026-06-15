@@ -7,13 +7,21 @@
 </div>
 
 <details>
-<summary>Workflow</summary>
+<summary>
 
-- **Terminal emulator:** windows-terminal *(now)*; ghostty *(future)*
-- **Shell:** zsh; zinit; starship
-- **Package manager:** apt; mise; pixi
-- **Multiplexer:** zellij
-- **Editor:** neovim
+**Workflow**
+
+</summary>
+
+**Terminal emulator:** windows-terminal *(now)*; ghostty *(future)*
+
+**Shell:** zsh; zinit; starship
+
+**Package manager:** apt; mise; pixi
+
+**Multiplexer:** zellij
+
+**Editor:** neovim
 
 </details>
 
