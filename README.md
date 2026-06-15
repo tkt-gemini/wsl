@@ -54,7 +54,7 @@
 
 > Follow the steps **in order** — each layer depends on the one above it.
 
-### Step 1 — APT: System Layer
+### Step 1 — APT
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -67,10 +67,9 @@ Packages in [`apt-pkgs.txt`](apt-pkgs.txt)
 
 ```bash
 chsh -s $(which zsh)
-# Log out and back in for the change to take effect
 ```
 
-→ Configuration: [`.zshrc`](.zshrc)
+Configuration: [`.zshrc`](.zshrc)
 
 #### Git configuration
 
@@ -78,17 +77,16 @@ chsh -s $(which zsh)
 git config --global user.name  "<name>"
 git config --global user.email "<email>"
 git config --global core.editor "nvim"
-
 # SSH key for GitHub
 ssh-keygen -t ed25519 -C "<email>"
-cat ~/.ssh/id_ed25519.pub   # paste this into GitHub → Settings → SSH keys
+cat ~/.ssh/id_ed25519.pub
 ```
 
 ---
 
-### Step 2 — mise: Tooling Layer
+### Step 2 — mise
 
-[mise](https://mise.jdx.dev) manages dev runtimes (Node, Python, Go…) and CLI tools as versioned, shim-based installs — no `sudo` needed.
+[mise](https://mise.jdx.dev) manages dev runtimes and CLI tools as versioned.
 
 ```bash
 curl https://mise.run | sh
@@ -100,27 +98,24 @@ Install runtimes and tools from the shared config:
 
 ```bash
 mise install
-
-# Verify
 mise list
 ```
 
-→ Configuration: [tkt-gemini/mise](https://github.com/tkt-gemini/mise)
+Configuration: [tkt-gemini](https://github.com/tkt-gemini/mise)
 
 ---
 
-### Step 3 — Zsh plugins: Zinit
+### Step 3 — Zinit
 
 [Zinit](https://github.com/zdharma-continuum/zinit) is a fast Zsh plugin manager with lazy-loading support.
 
 ```bash
-bash -c "$(curl --fail --show-error --silent --location \
-  https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 ```
 
 ---
 
-### Step 4 — Prompt: Starship
+### Step 4 — Starship
 
 ```bash
 curl -sS https://starship.rs/install.sh | sh
@@ -128,7 +123,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 ---
 
-### Step 5 — pixi: AI/ML Layer
+### Step 5 — pixi
 
 [pixi](https://pixi.sh) creates conda-based, per-project environments. Ideal for locking CUDA versions alongside Python packages.
 
@@ -136,40 +131,27 @@ curl -sS https://starship.rs/install.sh | sh
 curl -fsSL https://pixi.sh/install.sh | bash
 ```
 
-**Typical project workflow:**
-
-```bash
-cd my-robot-project
-pixi init
-pixi add python=3.11 pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
-pixi shell   # activate the environment
-```
-
 ---
 
-### Step 6 — Multiplexer: Zellij
+### Step 6 — Zellij
 
 ```bash
 mise use -g github:zellij-org/zellij
-
-# Verify
 zellij --version
 ```
 
-→ Configuration: [tkt-gemini/zellij](https://github.com/tkt-gemini/zellij)
+Configuration: [tkt-gemini](https://github.com/tkt-gemini/zellij)
 
 ---
 
-### Step 7 — Editor: Neovim
+### Step 7 — Neovim
 
 ```bash
 mise use -g github:neovim/neovim
-
-# Verify
 nvim --version
 ```
 
-→ Configuration [tkt-gemini/neovim](https://github.com/tkt-gemini/neovim)
+Configuration [tkt-gemini](https://github.com/tkt-gemini/neovim)
 
 ---
 
