@@ -61,8 +61,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y $(cat apt-pkgs.txt | grep -v '^#' | tr '\n' ' ')
 ```
 
-Key packages in [`apt-pkgs.txt`](apt-pkgs.txt): `build-essential`, `curl`, `git`,
-`libssl-dev`, `zsh`, and other system libraries.
+Packages in [`apt-pkgs.txt`](apt-pkgs.txt)
 
 #### Set Zsh as default shell
 
@@ -71,7 +70,7 @@ chsh -s $(which zsh)
 # Log out and back in for the change to take effect
 ```
 
-→ Zsh config: [`.zshrc`](.zshrc)
+→ Configuration: [`.zshrc`](.zshrc)
 
 #### Git configuration
 
@@ -100,12 +99,13 @@ source ~/.zshrc
 Install runtimes and tools from the shared config:
 
 ```bash
-# Config lives at: https://github.com/tkt-gemini/mise
 mise install
 
 # Verify
 mise list
 ```
+
+→ Configuration: [tkt-gemini/mise](https://github.com/tkt-gemini/mise)
 
 ---
 
@@ -156,7 +156,7 @@ mise use -g github:zellij-org/zellij
 zellij --version
 ```
 
-→ Layout & keybind config: [tkt-gemini/zellij](https://github.com/tkt-gemini/zellij)
+→ Configuration: [tkt-gemini/zellij](https://github.com/tkt-gemini/zellij)
 
 ---
 
@@ -169,7 +169,7 @@ mise use -g github:neovim/neovim
 nvim --version
 ```
 
-→ Full config (lazy.nvim, LSP, etc.): [tkt-gemini/neovim](https://github.com/tkt-gemini/neovim)
+→ Configuration [tkt-gemini/neovim](https://github.com/tkt-gemini/neovim)
 
 ---
 
