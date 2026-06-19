@@ -63,14 +63,6 @@ sudo apt install -y $(cat apt-pkgs.txt | grep -v '^#' | tr '\n' ' ')
 
 Packages in [`apt-pkgs.txt`](apt-pkgs.txt)
 
-#### Set Zsh as default shell
-
-```bash
-chsh -s $(which zsh)
-```
-
-Configuration: [`.zshrc`](.zshrc)
-
 #### Git configuration
 
 ```bash
@@ -79,7 +71,7 @@ git config --global user.email "<email>"
 git config --global core.editor "nvim"
 # SSH key for GitHub
 ssh-keygen -t ed25519 -C "<email>"
-cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub # copy to SSH Github setting
 ```
 
 ---
@@ -101,11 +93,19 @@ mise install
 mise list
 ```
 
-Configuration: [tkt-gemini](https://github.com/tkt-gemini/mise)
+Configuration for mise is [here](./mise-en-place/config.toml)
 
 ---
 
-### Step 3 — Zinit
+### Step 3 — Zsh
+
+#### Set Zsh as default shell
+
+```bash
+chsh -s $(which zsh)
+```
+
+#### Zinit
 
 [Zinit](https://github.com/zdharma-continuum/zinit) is a fast Zsh plugin manager with lazy-loading support.
 
@@ -115,15 +115,17 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 
 ---
 
-### Step 4 — Starship
+#### Starship
 
 ```bash
 curl -sS https://starship.rs/install.sh | sh
 ```
 
+Configuration for zsh is [here](./zsh/.zshrc)
+
 ---
 
-### Step 5 — pixi
+### Step 4 — pixi
 
 [pixi](https://pixi.sh) creates conda-based, per-project environments. Ideal for locking CUDA versions alongside Python packages.
 
@@ -133,25 +135,25 @@ curl -fsSL https://pixi.sh/install.sh | bash
 
 ---
 
-### Step 6 — Zellij
+### Step 5 — Zellij
 
 ```bash
 mise use -g github:zellij-org/zellij
 zellij --version
 ```
 
-Configuration: [tkt-gemini](https://github.com/tkt-gemini/zellij)
+Configuration [here](./zellij/config.kdl)
 
 ---
 
-### Step 7 — Neovim
+### Step 6 — Neovim
 
 ```bash
 mise use -g github:neovim/neovim
 nvim --version
 ```
 
-Configuration [tkt-gemini](https://github.com/tkt-gemini/neovim)
+Configuration [here](https://github.com/tkt-gemini/neovim)
 
 ---
 

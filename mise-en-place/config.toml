@@ -1,0 +1,13 @@
+[tools]
+bat = "latest"
+eza = "latest"
+fd = "latest"
+go = "1.22"
+node = "24"
+ripgrep = "latest"
+tree-sitter = "latest"
+zoxide = "latest"
+"github:jesseduffield/lazygit" = "latest"
+"github:junegunn/fzf" = "latest"
+"github:neovim/neovim" = "latest"
+"github:zellij-org/zellij" = "latest"
