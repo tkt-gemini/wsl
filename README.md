@@ -47,10 +47,10 @@
 └─────────────────────────────────────────────────────────┘
 ```
 
-> **Tooling philosophy:**
-> - `apt` for system-level packages that don't change often
-> - `mise` for portable runtimes and CLI tools across projects
-> - `pixi` for reproducible, per-project AI/ML environments with CUDA
+**Tooling philosophy:**
+- `apt` for system-level packages that don't change often
+- `mise` for portable runtimes and CLI tools across projects
+- `pixi` for reproducible, per-project AI/ML environments with CUDA
 
 ---
 
