@@ -1,12 +1,12 @@
 <div align="center">
 
-# WSL Ubuntu 26.04
+# WSL
+
+[![Python](https://img.shields.io/badge/WSL2-Ubuntu--26.04-498AF2?style=for-the-badge)](https://www.python.org/)
+[![scikit-learn](https://img.shields.io/badge/VERSION-0.1.0-C9B847?style=for-the-badge)](https://scikit-learn.org/)
+[![License](https://img.shields.io/badge/LICENSE-MIT-6B7F4E?style=for-the-badge)](LICENSE)
 
 **Workflow for Embodied AI**
-
-[![Python](https://img.shields.io/badge/Python-3.12%2B-blue)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5.0-orange)](https://scikit-learn.org/)
-[![License](https://img.shields.io/badge/LICENSE-MIT?style=for-the-badge&color=6B7F4E)](LICENSE)
 
 </div>
 
