@@ -43,3 +43,12 @@ zinit depth"1" light-mode for \
 ### End of Zinit's installer chunk
 
 export PATH="$HOME/.pixi/bin:$PATH"
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
